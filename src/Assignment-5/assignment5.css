@@ -1,7 +1,52 @@
-/* Our CSS file. */
-
-
-.container, .content {
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 4vh;
+}
+#container, .content {
 width: 100%;
 height: 100%;
+background-color: whitesmoke;
+}
+.card{
+    height: 85vh;
+    margin: 10vh 5vw 5vh 8vw;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    justify-content: center;
+    padding: 5vw;
+}
+.part{
+    display: flex;
+    width: 50%;
+    align-items: flex-end; 
+    background-color: palegreen;
+}
+img{
+    width: 100%;
+    position: relative;
+    bottom: 5%;
+}
+p{
+    margin-top: 30px;
+}
+button{
+    margin-top: 30px;
+    background-color: palegreen;
+    width: 8vw;
+    height: 8vh;
+    border:5px solid transparent;
+    border-image:linear-gradient(45deg,rgb(221, 92, 92),aqua) 10;
+}
+button:hover{
+    background-color: skyblue;
+    cursor: pointer;
 }

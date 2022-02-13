@@ -1,10 +1,5 @@
 /* Our CSS file. */
-*{
-    margin:0;
-    padding:0;
-}
-
-.container, .content {
+#container, .content {
 width: 100%;
 height: 100%;
 }
@@ -32,7 +27,7 @@ header h1 {
   }
 nav li {
     display:inline-block;
-    padding:15px 213px;
+    padding:15px 35px;
   }
 nav li:hover {
     background: #3F8DA7;
@@ -45,18 +40,16 @@ nav li:hover {
     text-align: center;
     padding: 50px 0;
     margin-bottom: 50px;
-    vertical-align: top;
 }  
 #hero img {
     display: block;
-    margin: auto;
+    margin: auto; 
     margin-bottom: 25px;
     border-radius: 50%;
     border: 5px solid #3F8DA7;
   }
 #hero h2 {
     font-size: 30px;
-    margin:0;
     margin-bottom: 25px;
   }
 .btn{  
@@ -76,7 +69,7 @@ nav li:hover {
     display: inline-block;
     text-align: center;
     vertical-align: top;
-    margin:0 22px;
+    margin:0 1.5%;
   }
 .three-col h3{
     font-size: 30px;
