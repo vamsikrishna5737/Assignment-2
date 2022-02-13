@@ -1,7 +1,42 @@
+
+
 /* Our CSS file. */
+#container{
+    width:100%;
+    height:100%;
+}
+.bokka
+{
+    float:right;
+    padding:10px 5px 10px 0px;
+}
+.bokka1
+{
+    float:left;
+    padding:20px 0px 10px 5px;
+}
+#main-content-section
+{
+    float:left;
+    border:1px solid black;
+    width:77%;
+    height:60vh;
+    margin-left:20px;
+}
+.post-img
+{
+    width:20vw;
+    height:25vh;
+    padding: 10px 35px 10px 35px;
 
-
-.container, .content {
-width: 100%;
-height: 100%;
+}
+#page-footer
+{
+    position:fixed;
+    bottom:0;
+    border:2px solid black;
+    margin-top: 5px;
+    margin-right:5px;
+    margin-bottom:5px;
+    padding:0px 5px 0px 5px;
 }
