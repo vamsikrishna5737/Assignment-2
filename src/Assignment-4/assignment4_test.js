@@ -14,7 +14,7 @@
   var quixote = require("../../vendor/quixote.js");
 
   // Define a test suite using Mocha's standard `define` function.
-  describe.only("Assignment-2", function () {
+  describe("Assignment-4", function () {
     // Variables used by our tests. They're populated in the `before()` and `beforeEach()` functions.
     var frame; // The Quixote test frame.
     var container, frameDom; // The figure element inside the media object. (The icon.)
@@ -25,9 +25,9 @@
       // Create the frame and load our stylesheet.
       frame = quixote.createFrame(
         {
-          src: "/base/src/Assignment-2/assignment2.html", // the server under test must be proxied to localhost
+          src: "/base/src/Assignment-4/assignment4.html", // the server under test must be proxied to localhost
           // The URL of our stylesheet. It's served by Karma and configured in `build/config/karma.conf.js`.
-          stylesheet: "/base/src/Assignment-2/assignment2.css",
+          stylesheet: "/base/src/Assignment-4/assignment4.css",
         },
         done
       ); // This is an asynchronous operation, so we pass in Mocha's `done` callback.
@@ -64,16 +64,9 @@
     it("container should have header for page", function () {
       assert.isTrue(isExist(header_ele));
     });
-    it("container should have logo image for page", function () {
+    it("header navigation should have three list items", function () {
       assert.isTrue(
-        isExist(
-          frame.toDomElement().contentDocument.getElementsByTagName("img")
-        )
-      );
-    });
-    it("input should have name attribute", function () {
-      assert.isTrue(
-        frameDom.getElementsByTagName("input")[0].hasAttribute("name")
+          frame.toDomElement().contentDocument.querySelectorAll("header nav ul")[0].childElementCount=== 3
       );
     });
     it("container should have nav bar for page", function () {
@@ -83,33 +76,26 @@
         )
       );
     });
-    it("Page should have two aside tags", function () {
-      assert.isTrue(frameDom.getElementsByTagName("aside").length === 2);
-    });
-    it("Page should have un-ordered list with id='right-sidebar-menu'", function () {
+   
+    it("Page should have three article tags with class name- 'three-col'", function () {
       assert.isTrue(
-        !!frame
-          .toDomElement()
-          .contentDocument.getElementById("right-sidebar-menu")
-      );
-    });
-    it("Page should have footer tag with id='page-footer'", function () {
-      assert.isTrue(
-        !!frame.toDomElement().contentDocument.getElementById("page-footer")
-      );
-    });
-    it("Page should have section tag with id='main-content-section'", function () {
-      assert.isTrue(
-        !!frame
-          .toDomElement()
-          .contentDocument.getElementById("main-content-section")
+        frame.toDomElement().contentDocument.getElementsByClassName("three-col")
+          .length === 3
       );
     });
 
-    it("Page should have six image tags with class='post-img'", function () {
+    it("Page should have section with id='hero'", function () {
       assert.isTrue(
-        frame.toDomElement().contentDocument.getElementsByClassName("post-img")
-          .length === 6
+        !!frame
+          .toDomElement()
+          .contentDocument.getElementById("hero")
+      );
+    });
+    it("container should have footer for page", function () {
+      assert.isTrue(
+        isExist(
+          frame.toDomElement().contentDocument.getElementsByTagName("footer")
+        )
       );
     });
   });
