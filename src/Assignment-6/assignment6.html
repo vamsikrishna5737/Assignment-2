@@ -41,7 +41,7 @@
 		let val=document.querySelector('#charblock')
 		val.innerHTML=`<p>Characters:${length}</p>`
 		if (length>0){
-			var thr=parseInt(length/275)+1
+			var thr=parseInt(length/276)+1
 			let val1=document.querySelector('#threadblock')
 		val1.innerHTML=`<p>Thread:${thr}</p>`
 		}
@@ -55,7 +55,7 @@
 	function createthread(){
 		let str1=document.querySelector('.rightblock')
 		var data=document.querySelector('#text').value
-		let length=parseInt((data.length/275)+1)
+		let length=parseInt((data.length/276)+1)
 		let start=0
 		let end=275
 		while(length!=0){
